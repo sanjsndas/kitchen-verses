@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Verses — Journal Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS for Kitchen Verses Blog */
+
+        :root {
+            --warm-terracotta: #E57373;
+            --sage-green: #81C784;
+            --linen-white: #F9FBE7;
+            --deep-charcoal-text: #263238;
+            --honey-gold: #FFB300;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--linen-white);
+            color: var(--deep-charcoal-text);
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: var(--linen-white);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: var(--warm-terracotta);
+            text-decoration: none;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--deep-charcoal-text);
+            font-weight: 400;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--warm-terracotta);
+        }
+
+        .page-hero {
+            background-color: var(--warm-terracotta);
+            color: var(--linen-white);
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .page-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2em;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .page-hero p {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            color: var(--deep-charcoal-text);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--warm-terracotta);
+            margin: 15px auto 0;
+        }
+
+        .blog-post-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .blog-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+        }
+
+        .blog-card img { /* New style for blog card images */
+            width: 100%;
+            height: 220px; /* Adjusted height for blog images */
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .blog-card-content {
+            padding: 25px;
+            flex-grow: 1; /* Allows content to expand and push footer down */
+        }
+
+        .blog-card-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            color: var(--warm-terracotta);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .blog-meta {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .blog-meta span {
+            margin-right: 15px;
+        }
+
+        .blog-card-content p {
+            font-size: 1.05em;
+            color: var(--deep-charcoal-text);
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: var(--sage-green);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--warm-terracotta);
+        }
+
+        footer {
+            background-color: var(--deep-charcoal-text);
+            color: var(--linen-white);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav ul li {
+            margin: 0 15px;
+        }
+
+        .footer-nav ul li a {
+            color: var(--linen-white);
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav ul li a:hover {
+            color: var(--warm-terracotta);
+        }
+
+        .footer-info p {
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .footer-social a {
+            color: var(--linen-white);
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: var(--honey-gold);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 0 15px 10px;
+            }
+
+            .page-hero {
+                padding: 60px 0;
+            }
+
+            .page-hero h1 {
+                font-size: 2.5em;
+            }
+
+            .page-hero p {
+                font-size: 1.1em;
+            }
+
+            .section-title {
+                font-size: 2.2em;
+            }
+
+            .blog-post-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 2em;
+            }
+
+            nav ul li {
+                margin: 0 10px 10px;
+            }
+
+            .page-hero {
+                padding: 40px 0;
+            }
+
+            .page-hero h1 {
+                font-size: 1.8em;
+            }
+
+            .page-hero p {
+                font-size: 0.9em;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Kitchen Verses</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>The Kitchen Verses Journal</h1>
+                <p>Dive into essays, reflections, and interviews that explore the profound connection between food, culture, and personal stories. Every article is a journey for the soul.</p>
+            </div>
+        </section>
+
+        <section id="blog-posts" class="container">
+            <h2 class="section-title">Latest Culinary Reflections</h2>
+            <div class="blog-post-list">
+                <div class="blog-card">
+                    <img src="b1.webp" alt="Assortment of colorful spices">
+                    <div class="blog-card-content">
+                        <h3>The Silent Language of Spices: A Journey Through Flavor</h3>
+                        <div class="blog-meta">
+                            <span>By Anya Sharma</span> | <span>July 1, 2025</span>
+                        </div>
+                        <p>
+                            Spices are more than just flavor enhancers; they are the aromatic whispers of history, trade routes, and ancient traditions. In this essay, we explore how a pinch of cumin can transport you to a bustling Moroccan market, or a dash of saffron can evoke the regal kitchens of Persia. We delve into the art of blending spices, understanding their individual personalities, and how they contribute to the narrative of a dish. From the fiery kick of chili to the soothing warmth of cinnamon, each spice tells a unique story of its origin, cultivation, and cultural significance. Discover how to unlock their full potential and infuse your cooking with deeper meaning and complexity.
+                        </p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="b2.webp" alt="Old handwritten recipe book">
+                    <div class="blog-card-content">
+                        <h3>Heirloom Recipes: Preserving More Than Just Taste</h3>
+                        <div class="blog-meta">
+                            <span>By Elias Vance</span> | <span>June 20, 2025</span>
+                        </div>
+                        <p>
+                            An heirloom recipe is a culinary time capsule, a handwritten note from the past that carries the essence of generations. This article reflects on the profound importance of preserving these family treasures. It's not just about the ingredients or the steps; it's about the memories, the laughter, the struggles, and the love that went into preparing those meals. We discuss practical tips for documenting and sharing your own family's culinary legacy, ensuring that these precious verses are not lost to time but continue to nourish future generations, fostering a deep connection to ancestry and tradition.
+                        </p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="b3.webp" alt="Person mindfully eating a meal">
+                    <div class="blog-card-content">
+                        <h3>The Art of Mindful Eating: Savoring Every Verse</h3>
+                        <div class="blog-meta">
+                            <span>By Dr. Lena Chen</span> | <span>June 10, 2025</span>
+                        </div>
+                        <p>
+                            In our fast-paced world, eating often becomes a hurried act. This piece explores the transformative power of mindful eating – an approach that encourages us to slow down, engage all our senses, and truly appreciate the food on our plate. From noticing the vibrant colors and intricate textures to savoring each aroma and flavor, mindful eating turns a simple meal into a profound experience. We discuss techniques to cultivate this practice, helping you to not only enjoy your food more but also to foster a healthier relationship with what you consume, reducing stress and increasing overall well-being.
+                        </p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="b4.webp" alt="Basket of fresh local produce">
+                    <div class="blog-card-content">
+                        <h3>From Farm to Feast: The Story of Local Ingredients</h3>
+                        <div class="blog-meta">
+                            <span>By David Kim</span> | <span>May 28, 2025</span>
+                        </div>
+                        <p>
+                            Understanding where our food comes from deepens our connection to it. This blog post takes you on a journey from the local farm to your kitchen table, highlighting the importance of seasonal and locally sourced ingredients. We interview small-scale farmers who pour their heart and soul into cultivating produce, and explore how using fresh, regional ingredients not only enhances the flavor of your dishes but also supports local communities and promotes sustainable practices. Discover how embracing the bounty of your local environment can transform your cooking and your appreciation for food.
+                        </p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="b5.webp" alt="A beautifully plated fusion dish">
+                    <div class="blog-card-content">
+                        <h3>Culinary Crossroads: When Traditions Meet in the Kitchen</h3>
+                        <div class="blog-meta">
+                            <span>By Sofia Rodriguez</span> | <span>May 15, 2025</span>
+                        </div>
+                        <p>
+                            Food is a universal language, and nowhere is this more evident than at culinary crossroads where different traditions merge. This article celebrates the beauty of fusion cuisine, exploring how chefs and home cooks alike are blending techniques and flavors from diverse cultures to create something entirely new yet deeply rooted. We look at examples of successful culinary fusions, discuss the challenges and joys of cross-cultural cooking, and encourage readers to experiment with combining their own heritage with global influences, fostering creativity and a broader understanding of the world through taste.
+                        </p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="b6.avif" alt="A warm bowl of comforting soup">
+                    <div class="blog-card-content">
+                        <h3>The Comfort of Soup: A Universal Embrace</h3>
+                        <div class="blog-meta">
+                            <span>By Michael Lee</span> | <span>May 5, 2025</span>
+                        </div>
+                        <p>
+                            Across cultures and continents, soup holds a special place in our hearts as the ultimate comfort food. This reflective piece delves into why a warm bowl of soup offers such profound solace. Whether it's a hearty stew on a cold winter's night, a light broth for healing, or a creamy bisque for celebration, soup transcends its ingredients to become a symbol of care, warmth, and home. We explore various soup traditions from around the world, highlighting their unique ingredients and the stories they tell, reminding us of the simple yet powerful act of nourishing ourselves and those we love.
+                        </p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2025 Kitchen Verses. All rights reserved.</p>
+                <p>
+                    Kitchen Verses<br>
+                    123 Culinary Lane, Storytelling City<br>
+                    Delhi, India, 110001<br>
+                    Email: info@kitchenverses.com
+                </p>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook" width="24" height="24"></a>
+                <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="Instagram" width="24" height="24"></a>
+                <a href="#" aria-label="Pinterest"><img src="https://img.icons8.com/ios-filled/50/ffffff/pinterest--v1.png" alt="Pinterest" width="24" height="24"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

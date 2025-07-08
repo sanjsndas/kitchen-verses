@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Verses — Cookies Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS for Kitchen Verses Cookies Policy Page */
+
+        :root {
+            --warm-terracotta: #E57373;
+            --sage-green: #81C784;
+            --linen-white: #F9FBE7;
+            --deep-charcoal-text: #263238;
+            --honey-gold: #FFB300;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--linen-white);
+            color: var(--deep-charcoal-text);
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: var(--linen-white);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: var(--warm-terracotta);
+            text-decoration: none;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--deep-charcoal-text);
+            font-weight: 400;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--warm-terracotta);
+        }
+
+        .page-hero {
+            background-color: var(--sage-green); /* Example hero color for cookies page */
+            color: var(--linen-white);
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .page-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2em;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .page-hero p {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            color: var(--deep-charcoal-text);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--warm-terracotta);
+            margin: 15px auto 0;
+        }
+
+        .cookies-content {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .cookies-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            color: var(--warm-terracotta);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--sage-green);
+            padding-bottom: 10px;
+        }
+
+        .cookies-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: var(--deep-charcoal-text);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .cookies-content h4 {
+            font-family: 'Lora', serif;
+            font-size: 1.4em;
+            color: var(--warm-terracotta);
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .cookies-content p, .cookies-content ul, .cookies-content ol {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .cookies-content ul, .cookies-content ol {
+            margin-left: 25px;
+        }
+
+        .cookies-content li {
+            margin-bottom: 8px;
+        }
+
+        .cookies-content a {
+            color: var(--sage-green);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .cookies-content a:hover {
+            color: var(--warm-terracotta);
+        }
+
+        /* Cookie Consent Dialogue Box */
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--deep-charcoal-text);
+            color: var(--linen-white);
+            padding: 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            transform: translateY(100%);
+            transition: transform 0.5s ease-out;
+        }
+
+        .cookie-consent-banner.show {
+            transform: translateY(0);
+        }
+
+        .cookie-consent-banner p {
+            margin-bottom: 15px;
+            font-size: 1em;
+            text-align: center;
+            max-width: 900px;
+        }
+
+        .cookie-consent-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .cookie-consent-buttons button {
+            background-color: var(--warm-terracotta);
+            color: var(--linen-white);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cookie-consent-buttons button:hover {
+            background-color: #d16161;
+            transform: translateY(-2px);
+        }
+
+        .cookie-consent-buttons button.decline {
+            background-color: #666;
+        }
+
+        .cookie-consent-buttons button.decline:hover {
+            background-color: #444;
+        }
+
+
+        footer {
+            background-color: var(--deep-charcoal-text);
+            color: var(--linen-white);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav ul li {
+            margin: 0 15px;
+        }
+
+        .footer-nav ul li a {
+            color: var(--linen-white);
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav ul li a:hover {
+            color: var(--warm-terracotta);
+        }
+
+        .footer-info p {
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .footer-social a {
+            color: var(--linen-white);
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: var(--honey-gold);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 0 15px 10px;
+            }
+
+            .page-hero {
+                padding: 60px 0;
+            }
+
+            .page-hero h1 {
+                font-size: 2.5em;
+            }
+
+            .page-hero p {
+                font-size: 1.1em;
+            }
+
+            .section-title {
+                font-size: 2.2em;
+            }
+
+            .cookies-content {
+                padding: 25px;
+            }
+
+            .cookies-content h2 {
+                font-size: 1.8em;
+            }
+
+            .cookies-content h3 {
+                font-size: 1.5em;
+            }
+
+            .cookies-content h4 {
+                font-size: 1.2em;
+            }
+
+            .cookie-consent-banner {
+                padding: 15px;
+            }
+
+            .cookie-consent-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .cookie-consent-buttons button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 2em;
+            }
+
+            nav ul li {
+                margin: 0 10px 10px;
+            }
+
+            .page-hero {
+                padding: 40px 0;
+            }
+
+            .page-hero h1 {
+                font-size: 1.8em;
+            }
+
+            .page-hero p {
+                font-size: 0.9em;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Kitchen Verses</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Our Cookies Policy</h1>
+                <p>At Kitchen Verses, we use cookies to enhance your experience, understand how you interact with our platform, and personalize the culinary journey. This policy explains what cookies are, how we use them, and your choices regarding their use.</p>
+            </div>
+        </section>
+
+        <section id="cookies-policy-content" class="container">
+            <div class="cookies-content">
+                <p>
+                    <strong>Last Updated: July 6, 2025</strong>
+                </p>
+                <p>
+                    Welcome to Kitchen Verses ("we," "our," or "us"). This Cookies Policy explains how we use cookies and similar technologies on our website, <a href="https://www.kitchenverses.com">www.kitchenverses.com</a> (the "Site"), and any related services, features, content, or applications we offer (collectively, the "Services"). This policy should be read in conjunction with our <a href="privacy.html">Privacy Policy</a>, which provides more details about how we use your personal information.
+                </p>
+                <p>
+                    By continuing to browse and use our Services, you are agreeing to our use of cookies in accordance with this Cookies Policy. If you do not agree to the use of cookies, you can manage your preferences as described below, or discontinue using our Services.
+                </p>
+
+                <h2>1. What Are Cookies?</h2>
+                <p>
+                    Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used by website owners to make their websites work more efficiently, as well as to provide reporting information. Essentially, a cookie allows the website to "remember" your actions or preferences over time. When you return to the site or navigate from one page to another, the website can retrieve the information previously stored in the cookie. This seemingly simple mechanism is fundamental to how modern websites deliver personalized and efficient user experiences.
+                </p>
+                <p>
+                    Cookies can be "persistent" or "session" cookies. Persistent cookies remain on your personal computer or mobile device when you go offline, while session cookies are deleted as soon as you close your web browser. The duration a persistent cookie remains on your device can vary significantly, ranging from a few hours to several years, depending on its purpose and configuration. Session cookies, on the other hand, are temporary and are primarily used to facilitate navigation during a single browsing session.
+                </p>
+                <p>
+                    The primary function of cookies is to enable a website to recognize a user's device and store certain information about their preferences or past actions. This can include remembering your login details, language preferences, items in a shopping cart, or even your last visited pages. Without cookies, every time you visited a new page on a website, the website would treat you as a completely new visitor, requiring you to re-enter information or preferences repeatedly. This would make browsing the internet a far less convenient experience.
+                </p>
+                <p>
+                    Beyond basic functionality, cookies also play a crucial role in analytics, allowing website owners to gather data on how their sites are used. This data, often aggregated and anonymized, provides valuable insights into user behavior, helping improve website design, content relevance, and overall user experience. For example, by tracking which pages are most popular, a website can prioritize content development in those areas.
+                </p>
+                <p>
+                    Furthermore, cookies are integral to online advertising. They enable advertisers to deliver more relevant ads to users based on their browsing history and interests. This process, known as behavioral advertising, relies on cookies to track user activity across different websites, building a profile of their preferences. While this can raise privacy concerns, it also means users are less likely to see irrelevant advertisements.
+                </p>
+                <p>
+                    It's important to understand that cookies themselves are not programs and cannot carry viruses or install malware on your computer. They are simply text files. However, they can be used in conjunction with other technologies to track user behavior, which is why transparency and user control over cookies are critical aspects of modern data privacy regulations.
+                </p>
+
+                <h2>2. How Kitchen Verses Uses Cookies</h2>
+                <p>
+                    Kitchen Verses uses cookies for a variety of purposes to ensure our Services function effectively, enhance your user experience, and provide us with valuable insights into how our platform is used. Our use of cookies is carefully considered to balance functionality with your privacy.
+                </p>
+
+                <h3>2.1. Essential Cookies (Strictly Necessary Cookies)</h3>
+                <p>
+                    These cookies are absolutely essential for the website to function properly. Without these cookies, certain core functionalities of Kitchen Verses would not be available, and you would not be able to navigate the site or use its basic features. They enable fundamental services like secure login, remembering your session, and maintaining the integrity of our platform.
+                </p>
+                <ul>
+                    <li>
+                        <h4>Purpose: Enabling Core Website Functionality</h4>
+                        <p>
+                            Essential cookies are the backbone of our website's operation. They facilitate fundamental processes such as identifying you as a logged-in user, allowing you to access secure areas of the site (like your "Recipe Journal"), and ensuring the consistent display of content across different pages. For instance, when you log into your Kitchen Verses account, an essential cookie remembers your authentication status, preventing you from having to log in on every new page you visit within your session. This ensures a seamless and uninterrupted browsing experience, allowing you to move freely between sections like the recipe library, your profile, and the blog without constant re-authentication. Without this, the user experience would be severely fragmented and frustrating, undermining the very purpose of a dynamic online platform.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: Security and Fraud Prevention</h4>
+                        <p>
+                            These cookies play a critical role in maintaining the security of our Services and protecting both our platform and our users from fraudulent activities. They help us to detect and prevent unauthorized access to accounts, identify suspicious behavior, and safeguard against cyber threats. For example, essential cookies might be used to verify the authenticity of user requests, distinguish between legitimate user activity and automated bot attacks, or to ensure that data submitted through forms is secure. This layer of security is non-negotiable for any online service, as it protects sensitive user data and maintains the integrity of the platform's operations. Their presence is a necessary measure to ensure a safe digital environment for all our community members, providing a foundational level of trust and reliability.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: Load Balancing and Performance Optimization</h4>
+                        <p>
+                            In a dynamic online environment like Kitchen Verses, essential cookies can also be used for load balancing. This means distributing network traffic across multiple servers to ensure the website remains responsive and available, even during peak usage times. By directing your requests to the most efficient server, these cookies help optimize the performance of our Services, ensuring fast loading times and a smooth user experience. This is crucial for maintaining website stability and preventing service interruptions, particularly as our user base grows and content demands increase. They work silently in the background to keep the gears of our platform turning smoothly, ensuring that your culinary journey is not hampered by technical delays.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: Remembering User Preferences (Basic)</h4>
+                        <p>
+                            While more advanced preference cookies fall into other categories, some essential cookies may store very basic user preferences that are fundamental to site functionality, such as acknowledging that you have seen a cookie consent banner. This prevents the banner from reappearing on every page load, improving your immediate browsing experience. This type of cookie is often considered "strictly necessary" because it directly relates to compliance with privacy regulations and ensures that the user's initial interaction with the site's privacy settings is respected. It's a small but significant detail that contributes to a less intrusive and more user-friendly interface.
+                        </p>
+                    </li>
+                </ul>
+
+                <h3>2.2. Analytics and Performance Cookies</h3>
+                <p>
+                    These cookies collect information about how visitors use our Services, such as which pages are visited most often, how much time is spent on specific pages, and if users encounter error messages. This information is typically aggregated and anonymized, meaning it does not directly identify you. We use this data to understand and improve the performance and design of Kitchen Verses.
+                </p>
+                <ul>
+                    <li>
+                        <h4>Purpose: Understanding User Behavior and Site Performance</h4>
+                        <p>
+                            Analytics cookies are vital for us to gain insights into how users interact with Kitchen Verses. They track patterns such as the sequence of pages visited, the duration of time spent on each page, and the paths users take through our content. This data allows us to identify popular recipes, frequently accessed blog posts, and areas of the site that might be causing user friction. For example, if we notice a high exit rate on a particular page, it signals a potential issue with content clarity or navigation. By analyzing these trends, we can make informed decisions about content strategy, layout optimization, and feature development, ultimately enhancing the overall user experience. This continuous feedback loop is crucial for the iterative improvement of our platform, ensuring it remains engaging and intuitive.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: Identifying and Resolving Technical Issues</h4>
+                        <p>
+                            When users encounter errors or performance bottlenecks, analytics cookies can help us pinpoint the source of the problem. They record instances of broken links, server errors, or slow loading times, allowing our technical team to quickly diagnose and resolve issues. For example, if a specific recipe page consistently fails to load images, analytics data can highlight this problem, enabling us to take corrective action. This proactive approach to error detection and resolution minimizes disruption for our users and ensures the stability and reliability of our Services. By understanding where technical glitches occur, we can maintain a high standard of operational efficiency, providing a seamless browsing experience.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: Optimizing Content and Features</h4>
+                        <p>
+                            By understanding which content resonates most with our audience, we can refine our editorial strategy and develop new features that align with user interests. For instance, if analytics show a strong engagement with "Heirloom Dishes," we might prioritize creating more content in that category or developing new features for organizing family recipes. This data-driven approach ensures that the content we produce and the features we develop are relevant and valuable to our community. It allows us to tailor Kitchen Verses to the evolving preferences of our users, ensuring that our platform remains fresh, engaging, and responsive to their culinary storytelling needs.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: A/B Testing and Feature Rollouts</h4>
+                        <p>
+                            Analytics cookies are also instrumental in conducting A/B tests. This involves presenting different versions of a page or feature to different segments of our audience to determine which performs better. For example, we might test two different layouts for a recipe page to see which one leads to higher engagement. These cookies help us track the performance of each version and make data-backed decisions about design and functionality changes. This iterative testing process ensures that any new features or design elements we introduce are optimized for user experience and effectiveness, leading to a more intuitive and enjoyable platform for everyone.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: Understanding Geographic and Device Usage</h4>
+                        <p>
+                            Analytics cookies can provide insights into the geographic locations of our users (at a broad, non-identifiable level) and the types of devices they use to access Kitchen Verses (e.g., desktop, mobile, tablet). This information helps us optimize our website for different screen sizes and network conditions, ensuring a consistent and high-quality experience across all devices. For example, if a significant portion of our users access the site via mobile, we can prioritize mobile-first design improvements. This allows us to cater to the diverse technical environments of our global community, ensuring accessibility and optimal performance for all.
+                        </p>
+                    </li>
+                </ul>
+
+                <h3>2.3. Functionality Cookies (Preference Cookies)</h3>
+                <p>
+                    These cookies allow our Services to remember choices you make (such as your username, language, or the region you are in) and provide enhanced, more personal features. They may also be used to provide services you have asked for, such as watching a video or commenting on a blog. The information these cookies collect may be anonymized and they cannot track your browsing activity on other websites.
+                </p>
+                <ul>
+                    <li>
+                        <h4>Purpose: Remembering User Preferences and Settings</h4>
+                        <p>
+                            Functionality cookies significantly enhance your personalized experience on Kitchen Verses by remembering your specific preferences. For instance, if you set a preferred language, these cookies ensure that the website content is consistently displayed in that language on subsequent visits. They can also recall your chosen display settings, such as font size or contrast preferences, or even remember your last viewed recipe category, making it easier for you to pick up where you left off. This saves you the effort of reconfiguring settings each time you visit, contributing to a more seamless and tailored user journey. The goal is to make your interaction with our platform feel intuitive and custom-fitted to your individual needs and habits.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: Enhancing User Experience (e.g., Remembering Login State)</h4>
+                        <p>
+                            Beyond basic authentication handled by essential cookies, functionality cookies can help maintain your logged-in state for extended periods, reducing the need for frequent re-logins. They can also remember information you've previously entered into forms, such as search queries or comments, so you don't have to retype them. This convenience is crucial for a fluid user experience, especially when engaging with interactive features like "Your Recipe Journal" or the "Write Your Verse" submission forms. By anticipating your needs and remembering your past inputs, these cookies streamline your interactions, making the platform feel more responsive and intelligent.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: Providing Personalized Content Features</h4>
+                        <p>
+                            These cookies enable us to provide features that are specifically tailored to your individual interactions and preferences. For example, if you frequently save recipes to your "Recipe Journal," functionality cookies might help surface related content or suggest new recipes based on your saved items. They can also remember your progress through a multi-step process, like a complex recipe tutorial, ensuring you don't lose your place if you navigate away and return. This level of personalization makes the content feel more relevant and directly applicable to your interests, fostering a deeper engagement with the culinary stories and resources available on Kitchen Verses.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: Enabling Interactive Elements and Social Sharing</h4>
+                        <p>
+                            Functionality cookies can facilitate the operation of various interactive elements on our site. This could include remembering your preference to play audio narrations on recipes, allowing you to share content directly to social media platforms without re-authenticating, or enabling embedded video players to remember your volume settings. While some social sharing functions might also involve advertising cookies from third parties, the core functionality of remembering your choices within these interactive elements often relies on these preference-oriented cookies. They bridge the gap between static content and dynamic user engagement, making the site a more vibrant and connected experience.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: Preventing Repetitive Information Displays</h4>
+                        <p>
+                            These cookies can prevent the repeated display of messages or pop-ups that you have already dismissed or acknowledged. For example, if we have a one-time welcome message or a tutorial overlay for new features, a functionality cookie can remember that you've seen it, ensuring it doesn't reappear and disrupt your browsing. This contributes to a cleaner, less intrusive user interface, allowing you to focus on the content and features that matter most to you without unnecessary interruptions. It's about respecting your past interactions and optimizing the flow of information on the site.
+                        </p>
+                    </li>
+                </ul>
+
+                <h3>2.4. Targeting and Advertising Cookies</h3>
+                <p>
+                    These cookies are used to deliver advertisements more relevant to you and your interests. They are usually placed by advertising networks with the website operator's permission. They remember that you have visited a website and this information is shared with other organizations, e.g., advertisers. Quite often, targeting or advertising cookies will be linked to site functionality provided by the other organization.
+                </p>
+                <ul>
+                    <li>
+                        <h4>Purpose: Delivering Relevant Advertisements</h4>
+                        <p>
+                            Targeting and advertising cookies are designed to make the advertisements you see on Kitchen Verses, and potentially on other websites, more relevant to your interests. They achieve this by tracking your browsing habits and preferences over time. For example, if you frequently view recipes for baking or specific cuisines, these cookies might help display ads for baking equipment, specialty ingredients, or cooking classes that align with those interests. This personalization aims to make advertising less intrusive and more useful to you, by showing you products and services that you are genuinely more likely to find valuable. It shifts the advertising model from broad, untargeted displays to a more refined, interest-based approach.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: Measuring Advertising Campaign Effectiveness</h4>
+                        <p>
+                            These cookies also play a crucial role in helping us, and our advertising partners, understand the effectiveness of advertising campaigns. They track metrics such as how many times an ad is displayed, how many users click on it, and whether those clicks lead to a desired action (e.g., signing up for a newsletter or making a purchase if such features were available). This allows advertisers to optimize their spending and improve the relevance of their campaigns. For Kitchen Verses, it helps us assess the value of our advertising partnerships and ensure that our platform can continue to offer free content by generating sustainable revenue. This analytical capability is fundamental to the economic model of many free online services.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: Limiting Ad Frequency and Preventing Repetition</h4>
+                        <p>
+                            Another important function of advertising cookies is to control the frequency with which you see certain advertisements. Without these cookies, you might be bombarded with the same ad repeatedly, which can be annoying and counterproductive. By remembering that you've already seen a particular ad a certain number of times, these cookies help to limit its display, improving your overall browsing experience. This ensures a more balanced exposure to advertisements, making the advertising experience less intrusive and more tolerable for users. It's a mechanism designed to enhance user comfort while still serving the needs of advertisers.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: Building User Profiles for Targeted Marketing</h4>
+                        <p>
+                            Over time, by tracking your interactions across various websites that use the same advertising networks, these cookies can contribute to building a profile of your interests. This profile, typically anonymized and aggregated, is then used to deliver highly targeted advertisements. For example, if you visit multiple cooking sites, search for kitchen gadgets, and view recipe videos, your profile might indicate a strong interest in culinary activities, leading to more tailored ad content. While this raises privacy considerations, it is a common practice in online advertising to deliver more personalized content and offers to users.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Purpose: Social Media Integration and Sharing</h4>
+                        <p>
+                            Many social media platforms use cookies to integrate their features into websites. For example, "Like" or "Share" buttons from Facebook, Twitter, or Pinterest often set cookies. These cookies allow you to share content from Kitchen Verses directly onto your social media profiles and enable the social media platforms to track your activity for their own advertising and content personalization purposes. This integration facilitates content dissemination and community engagement, but it's important to be aware that your interaction with these features is also governed by the privacy policies of the respective social media companies.
+                        </p>
+                    </li>
+                </ul>
+
+                <h2>3. Third-Party Cookies</h2>
+                <p>
+                    In addition to our own cookies (first-party cookies), we may also use various third-party cookies to report usage statistics of the Services, deliver advertisements on and through the Services, and so on. Third-party cookies are cookies set by a domain other than Kitchen Verses. These cookies are typically used for cross-site tracking, re-targeting, and analytics by external service providers.
+                </p>
+                <ul>
+                    <li>
+                        <h4>Google Analytics Cookies</h4>
+                        <p>
+                            We use Google Analytics, a web analytics service provided by Google, Inc. ("Google"). Google Analytics uses cookies to help us analyze how users use the Site. The information generated by the cookie about your use of the Site (including your IP address) will be transmitted to and stored by Google on servers in the United States. Google will use this information for the purpose of evaluating your use of the Site, compiling reports on website activity for website operators, and providing other services relating to website activity and internet usage. Google may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Google's behalf. Google will not associate your IP address with any other data held by Google. You may refuse the use of cookies by selecting the appropriate settings on your browser, however please note that if you do this you may not be able to use the full functionality of this Site. By using this Site, you consent to the processing of data about you by Google in the manner and for the purposes set out above. For more information on Google Analytics cookies, please see Google's privacy policy.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Social Media Cookies</h4>
+                        <p>
+                            Kitchen Verses integrates with various social media platforms (e.g., Facebook, Instagram, Pinterest) to allow you to share our content and interact with our social media presence. These platforms may set their own cookies on your device when you visit our Site, particularly if you are logged into their services. These cookies are used by the social media companies for purposes such as tracking your activity across different websites, building a profile of your interests, and delivering targeted advertisements. We do not control these third-party cookies, and their use is governed by the privacy policies of the respective social media platforms. We encourage you to review their policies to understand how they use your data.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Advertising Network Cookies</h4>
+                        <p>
+                            We may partner with third-party advertising networks to display advertisements on our Site or to manage our advertising on other sites. Our advertising partners may use cookies and web beacons to collect information about your activities on Kitchen Verses and other websites to provide you with targeted advertising based on your interests. This process is often referred to as "interest-based advertising" or "behavioral advertising." These cookies allow the advertising networks to recognize your browser and device, and to serve ads that are more relevant to your inferred interests. They also help us to measure the effectiveness of our advertising campaigns.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Embedded Content Cookies</h4>
+                        <p>
+                            Occasionally, we may embed content from third-party services, such as YouTube videos or SoundCloud audio clips, directly into our blog posts or recipe pages. When you interact with this embedded content, the third-party service provider may set cookies on your device. For example, if you play a YouTube video embedded on our site, YouTube may place cookies to remember your playback preferences, track your viewing habits, or serve you relevant ads on their platform. We have no control over these third-party cookies and encourage you to review the cookie policies of these external services for more information.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Affiliate Marketing Cookies</h4>
+                        <p>
+                            In some instances, Kitchen Verses may participate in affiliate marketing programs. This means that when you click on certain links on our Site that lead to third-party products or services (e.g., kitchenware, specialty ingredients), a cookie may be placed on your device by the affiliate network. This cookie allows the affiliate network to track that you were referred from Kitchen Verses and, if you make a purchase, we may earn a small commission. These cookies are solely for tracking referral activity and do not collect personal identifying information about you.
+                        </p>
+                    </li>
+                </ul>
+
+                <h2>4. Your Cookie Choices and Management</h2>
+                <p>
+                    You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by managing your browser settings or through specific opt-out mechanisms provided by third parties.
+                </p>
+
+                <h3>4.1. Browser Settings</h3>
+                <p>
+                    Most web browsers allow you to control cookies through their settings preferences. However, if you limit the ability of websites to set cookies, you may worsen your overall user experience, as it will no longer be personalized to you. It may also stop you from saving customized settings like login information.
+                </p>
+                <ul>
+                    <li>
+                        <h4>Google Chrome</h4>
+                        <p>
+                            To manage cookies in Google Chrome, open the browser, click on the three-dot menu icon in the top-right corner, and select "Settings." From there, navigate to "Privacy and security" and then "Site Settings." Under "Cookies and site data," you can choose to "Allow all cookies," "Block third-party cookies in Incognito," "Block third-party cookies," or "Block all cookies (not recommended)." You can also see all cookies and site data, and manage individual site permissions. For more granular control, you can click on "See all site data and permissions" to delete specific cookies or block cookies from particular websites. This comprehensive control allows users to tailor their cookie preferences, balancing privacy concerns with website functionality.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Mozilla Firefox</h4>
+                        <p>
+                            In Mozilla Firefox, click the menu button (three horizontal lines) in the top-right corner and select "Settings." Then, go to "Privacy & Security." Here, you'll find "Enhanced Tracking Protection," which offers different levels of protection: "Standard" (blocks some third-party trackers), "Strict" (blocks more trackers and cookies), and "Custom" (allows you to choose what to block, including all third-party cookies). You can also manage "Cookies and Site Data" to clear data for specific websites or remove all cookies. Firefox's approach emphasizes privacy by offering robust built-in tracking protection, giving users significant control over their online footprint.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Microsoft Edge</h4>
+                        <p>
+                            For Microsoft Edge, click the three-dot menu in the top-right corner and select "Settings." Go to "Privacy, search, and services." Under "Tracking prevention," you can choose between "Basic," "Balanced," or "Strict" levels of tracking prevention, which affect how third-party cookies are handled. Below that, under "Clear browsing data," you can choose what to clear, including cookies and other site data. For more specific control, navigate to "Cookies and site permissions" and then "Manage and delete cookies and site data" to view and remove individual cookies or block specific sites from setting cookies. Edge provides a range of options to cater to different user privacy preferences.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Apple Safari</h4>
+                        <p>
+                            On Safari (for macOS), go to "Safari" in the menu bar, then "Preferences," and select "Privacy." Here, you can check "Prevent cross-site tracking" to block third-party cookies used for tracking. You can also click "Manage Website Data..." to see which websites have stored cookies and other data on your computer, and remove them individually or all at once. For iOS devices, go to "Settings" > "Safari" > "Privacy & Security," where you can toggle "Prevent Cross-Site Tracking" and "Block All Cookies." Safari's default settings are generally more privacy-focused, aiming to limit tracking by third parties.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Other Browsers</h4>
+                        <p>
+                            For other browsers, such as Opera, Brave, or Vivaldi, the process will be similar. Generally, you can find cookie management options within the "Settings" or "Preferences" menu, typically under sections related to "Privacy," "Security," or "Site Settings." Look for options to clear browsing data, manage site permissions, or control tracking prevention. If you are unsure, consult your browser's help documentation or support pages for specific instructions. The principle remains consistent: modern browsers offer a spectrum of controls to empower users in managing their cookie preferences.
+                        </p>
+                    </li>
+                </ul>
+
+                <h3>4.2. Opt-Out Mechanisms</h3>
+                <p>
+                    In addition to browser controls, some third-party service providers offer direct opt-out mechanisms for their cookie usage. These are particularly relevant for advertising and analytics cookies.
+                </p>
+                <ul>
+                    <li>
+                        <h4>Google Analytics Opt-Out Browser Add-on</h4>
+                        <p>
+                            Google provides a specific browser add-on that allows users to prevent their data from being used by Google Analytics. This add-on communicates with the Google Analytics JavaScript (ga.js, analytics.js, and gtag.js) to indicate that information about the website visit should not be sent to Google Analytics. This tool is designed for users who wish to opt-out of Google Analytics tracking across all websites they visit, providing a universal solution for this particular service. It's a powerful tool for those who want to ensure their browsing activity is not collected for analytical purposes by Google.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Digital Advertising Alliance (DAA) and Network Advertising Initiative (NAI)</h4>
+                        <p>
+                            Many advertising networks participate in industry self-regulatory programs that provide centralized opt-out tools. The Digital Advertising Alliance (DAA) offers an "Opt Out of Interest-Based Advertising" tool (available at <a href="http://optout.aboutads.info/" target="_blank">http://optout.aboutads.info/</a>) that allows you to opt out of interest-based advertising from participating companies. Similarly, the Network Advertising Initiative (NAI) provides a consumer opt-out page (<a href="http://optout.networkadvertising.org/" target="_blank">http://optout.networkadvertising.org/</a>) for its members. Using these tools can help you manage your preferences across a wide range of advertising partners, reducing the amount of targeted advertising you receive. However, opting out does not mean you will no longer see ads; it simply means the ads you see may be less relevant to your interests.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>YourOnlineChoices (Europe)</h4>
+                        <p>
+                            For users in Europe, the European Interactive Digital Advertising Alliance (EDAA) provides a similar platform called "YourOnlineChoices" (<a href="http://www.youronlinechoices.eu/" target="_blank">http://www.youronlinechoices.eu/</a>). This tool allows you to manage your online advertising preferences and opt out of interest-based advertising from companies that are part of the EDAA framework. It offers a centralized and user-friendly interface to control your exposure to targeted ads across various European online services. This initiative is part of a broader effort to provide greater transparency and control to consumers regarding their online data.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Specific Social Media Platform Settings</h4>
+                        <p>
+                            If you are concerned about cookies set by social media platforms, you should review the privacy and cookie settings directly within your accounts on those platforms (e.g., Facebook, Instagram, Pinterest). Most social media services provide detailed controls over your data and advertising preferences within their own settings dashboards. For example, Facebook's Ad Preferences allow you to see why you're seeing certain ads and to adjust your interests. This direct management is often the most effective way to control how these platforms use cookies in relation to your profile.
+                        </p>
+                    </li>
+                </ul>
+
+                <h2>5. Do Not Track Signals</h2>
+                <p>
+                    Some web browsers may transmit "Do Not Track" (DNT) signals to websites with which the browser communicates. Kitchen Verses currently does not respond to DNT signals. There is no universally accepted standard for how websites should respond to DNT signals, and until such a standard is established, we may not be able to recognize or respond to them.
+                </p>
+                <p>
+                    The concept of "Do Not Track" emerged as a proposed mechanism for users to signal their privacy preferences to websites. When enabled in a browser, a DNT signal sends a header to websites indicating the user's desire not to be tracked. However, the effectiveness of DNT is limited by the fact that its implementation is voluntary for websites, and there is no legal obligation for sites to comply with these signals. This lack of a unified standard means that while your browser might send a DNT signal, many websites, including ours, may not be configured to interpret or act upon it.
+                </p>
+                <p>
+                    Therefore, while we respect your privacy choices, relying solely on a DNT signal may not fully prevent tracking by all third parties. For comprehensive control over cookies and tracking, we recommend utilizing the browser settings and opt-out mechanisms detailed in Section 4 of this policy. These methods provide more direct and actionable control over the cookies placed on your device and how your data is used for various purposes. We will continue to monitor developments in DNT standards and adapt our practices accordingly if a widely accepted and enforceable standard emerges.
+                </p>
+
+                <h2>6. Changes to This Cookies Policy</h2>
+                <p>
+                    We may update our Cookies Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will notify you of any material changes by posting the new Cookies Policy on this page and updating the "Last Updated" date at the top of this policy. We may also notify you through email or other prominent means prior to the change becoming effective.
+                </p>
+                <p>
+                    We encourage you to review this Cookies Policy periodically for any changes. Your continued use of our Services after any modifications to this Cookies Policy will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Cookies Policy. Our commitment to transparency means we will always strive to keep you informed about how we use cookies and how you can manage your preferences.
+                </p>
+
+                <h2>7. Contact Us Regarding Cookies</h2>
+                <p>
+                    If you have any questions, concerns, or requests regarding this Cookies Policy or our use of cookies, please do not hesitate to contact us. We are dedicated to ensuring that your experience with Kitchen Verses is transparent and that your privacy concerns are addressed with the utmost care.
+                </p>
+                <ul>
+                    <li>
+                        <h4>Inquiry Point 1: General Cookie Policy Questions</h4>
+                        <p>
+                            If you have general questions about what cookies are, why we use them, or how they function on Kitchen Verses, please feel free to reach out. We aim to demystify the technical aspects of cookies and provide clear, understandable explanations. This includes queries about the difference between first-party and third-party cookies, or how cookies contribute to the overall functionality of our website. We believe that an informed user is an empowered user, and we are happy to clarify any ambiguities you might have about our cookie practices.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Inquiry Point 2: Specific Cookie Identification</h4>
+                        <p>
+                            Should you identify a specific cookie on our site that you are curious about, or if you wish to understand the exact purpose of a particular cookie string, you can contact us with the cookie's name. While we provide general categories, we can offer more specific details about individual cookies we deploy, their origin, and their lifespan. This level of detail can be particularly helpful for users who are performing their own privacy audits or have specific technical questions about data storage on their devices. Please note that for third-party cookies, we may redirect you to the respective third party's policy for the most accurate information.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Inquiry Point 3: Opting Out of Specific Cookie Categories</h4>
+                        <p>
+                            If you are having difficulty using the browser settings or third-party opt-out mechanisms to manage your cookie preferences, please contact us for guidance. While we cannot directly manage your browser settings, we can provide step-by-step instructions or point you to relevant resources to help you effectively opt out of certain cookie categories, such as advertising or analytics cookies. Our goal is to empower you with the tools and knowledge needed to control your online privacy effectively, ensuring your choices are respected across our platform.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Inquiry Point 4: Data Privacy Concerns Related to Cookies</h4>
+                        <p>
+                            For any concerns regarding how personal data collected via cookies is used, stored, or processed, please refer to our <a href="privacy.html">Privacy Policy</a>. However, if your privacy concerns are specifically linked to cookie usage and you require further clarification beyond what is stated in our policies, our privacy team is available to assist. This might include questions about data anonymization, aggregation, or how cookie data contributes to user profiling. We are committed to addressing all privacy-related inquiries thoroughly and in compliance with applicable data protection laws.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Inquiry Point 5: Reporting Unexpected Cookie Behavior</h4>
+                        <p>
+                            If you notice any unexpected cookie behavior on Kitchen Verses, such as a cookie appearing that is not mentioned in this policy, or if you suspect unauthorized cookie placement, please report it to us immediately. Your vigilance helps us maintain the security and integrity of our platform. We will investigate all such reports promptly to ensure that our cookie practices remain transparent and compliant. This collaborative approach with our users is vital for maintaining a secure and trustworthy online environment.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Inquiry Point 6: Accessibility of Cookie Information</h4>
+                        <p>
+                            If you have any difficulty accessing or understanding any part of this Cookies Policy due to accessibility needs, please let us know. We are committed to making our privacy information accessible to all users and will work with you to provide the information in an alternative, accessible format. Your ability to understand our policies is paramount, and we will make every effort to accommodate your needs, ensuring that everyone can make informed decisions about their privacy on Kitchen Verses.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Inquiry Point 7: Feedback on Cookie Policy Clarity</h4>
+                        <p>
+                            We constantly strive to make our policies as clear and understandable as possible. If you have feedback on how we can improve the clarity, comprehensiveness, or organization of this Cookies Policy, we welcome your suggestions. Your input is invaluable in helping us communicate our practices effectively and build greater trust with our community. We believe that a well-understood policy is a cornerstone of good data governance and user empowerment.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Inquiry Point 8: Requests for Personal Data Related to Cookies</h4>
+                        <p>
+                            Under certain data protection laws (like GDPR), you may have the right to request access to, rectification of, or erasure of personal data that may be collected via cookies. If you wish to exercise these data subject rights specifically in relation to cookie-derived data, please contact us. We will guide you through the process and respond to your request in accordance with applicable legal requirements. Your control over your personal data, even when collected through automated means like cookies, is a fundamental right that we respect and facilitate.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Inquiry Point 9: Questions About Future Cookie Technologies</h4>
+                        <p>
+                            The landscape of web technologies, including cookies and tracking methods, is constantly evolving. If you have questions about how Kitchen Verses might adapt to new technologies or changes in industry standards regarding cookies in the future, we are open to discussing our forward-looking approach. While we cannot predict all future developments, we are committed to maintaining transparency and user control as technology advances. Your curiosity about these evolving practices helps us to stay ahead and ensure our policies remain relevant and protective.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Inquiry Point 10: Collaboration on Cookie Management Best Practices</h4>
+                        <p>
+                            For organizations or individuals interested in collaborating on best practices for cookie management and user privacy, we are open to dialogue. We believe that a collective effort is essential in establishing robust and user-friendly privacy frameworks across the internet. If you have insights or proposals for improving cookie consent mechanisms or data transparency, please reach out. We are eager to learn from and contribute to the broader conversation around ethical data practices in the digital realm.
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    <strong>By Email:</strong> <a href="mailto:privacy@kitchenverses.com">privacy@kitchenverses.com</a>
+                </p>
+                <p>
+                    Thank you for taking the time to understand our Cookies Policy. Your trust is paramount to us, and we are committed to maintaining the highest standards of transparency and data protection.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2025 Kitchen Verses. All rights reserved.</p>
+                <p>
+                    Kitchen Verses<br>
+                    123 Culinary Lane, Storytelling City<br>
+                    Delhi, India, 110001<br>
+                    Email: info@kitchenverses.com<br>
+                    Phone: +91 12345 67890
+                </p>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook" width="24" height="24"></a>
+                <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="Instagram" width="24" height="24"></a>
+                <a href="#" aria-label="Pinterest"><img src="https://img.icons8.com/ios-filled/50/ffffff/pinterest--v1.png" alt="Pinterest" width="24" height="24"></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookieConsentBanner" class="cookie-consent-banner">
+        <p>
+            We use cookies to enhance your browsing experience, analyze site traffic, and serve personalized content. By clicking "Accept All Cookies," you agree to our use of cookies as described in our <a href="cookies.html" style="color: var(--warm-terracotta); text-decoration: underline;">Cookies Policy</a>. You can manage your preferences at any time.
+        </p>
+        <div class="cookie-consent-buttons">
+            <button id="acceptCookies">Accept All Cookies</button>
+            <button id="declineCookies" class="decline">Decline All Cookies</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.getElementById('cookieConsentBanner');
+            const acceptButton = document.getElementById('acceptCookies');
+            const declineButton = document.getElementById('declineCookies');
+            const COOKIE_CONSENT_KEY = 'kitchenVersesCookieConsent';
+
+            // Check if user has already made a choice
+            const consentStatus = localStorage.getItem(COOKIE_CONSENT_KEY);
+
+            if (!consentStatus) {
+                // If no choice made, show the banner after a short delay
+                setTimeout(() => {
+                    cookieBanner.classList.add('show');
+                }, 1000); // Show after 1 second
+            }
+
+            acceptButton.addEventListener('click', function() {
+                localStorage.setItem(COOKIE_CONSENT_KEY, 'accepted');
+                cookieBanner.classList.remove('show');
+                // You can add logic here to enable analytics or other cookies
+                console.log('Cookies accepted!');
+            });
+
+            declineButton.addEventListener('click', function() {
+                localStorage.setItem(COOKIE_CONSENT_KEY, 'declined');
+                cookieBanner.classList.remove('show');
+                // You can add logic here to disable analytics or other non-essential cookies
+                console.log('Cookies declined!');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Verses — Terms of Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS for Kitchen Verses Terms of Service Page */
+
+        :root {
+            --warm-terracotta: #E57373;
+            --sage-green: #81C784;
+            --linen-white: #F9FBE7;
+            --deep-charcoal-text: #263238;
+            --honey-gold: #FFB300;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--linen-white);
+            color: var(--deep-charcoal-text);
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: var(--linen-white);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: var(--warm-terracotta);
+            text-decoration: none;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--deep-charcoal-text);
+            font-weight: 400;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--warm-terracotta);
+        }
+
+        .page-hero {
+            background-color: var(--honey-gold); /* Changed hero color for terms page */
+            color: var(--linen-white);
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .page-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2em;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .page-hero p {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            color: var(--deep-charcoal-text);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--warm-terracotta);
+            margin: 15px auto 0;
+        }
+
+        .terms-content {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .terms-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            color: var(--warm-terracotta);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--honey-gold);
+            padding-bottom: 10px;
+        }
+
+        .terms-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: var(--deep-charcoal-text);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .terms-content p, .terms-content ul, .terms-content ol {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .terms-content ul, .terms-content ol {
+            margin-left: 25px;
+        }
+
+        .terms-content li {
+            margin-bottom: 8px;
+        }
+
+        .terms-content a {
+            color: var(--sage-green);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .terms-content a:hover {
+            color: var(--warm-terracotta);
+        }
+
+        footer {
+            background-color: var(--deep-charcoal-text);
+            color: var(--linen-white);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav ul li {
+            margin: 0 15px;
+        }
+
+        .footer-nav ul li a {
+            color: var(--linen-white);
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav ul li a:hover {
+            color: var(--warm-terracotta);
+        }
+
+        .footer-info p {
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .footer-social a {
+            color: var(--linen-white);
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: var(--honey-gold);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 0 15px 10px;
+            }
+
+            .page-hero {
+                padding: 60px 0;
+            }
+
+            .page-hero h1 {
+                font-size: 2.5em;
+            }
+
+            .page-hero p {
+                font-size: 1.1em;
+            }
+
+            .section-title {
+                font-size: 2.2em;
+            }
+
+            .terms-content {
+                padding: 25px;
+            }
+
+            .terms-content h2 {
+                font-size: 1.8em;
+            }
+
+            .terms-content h3 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 2em;
+            }
+
+            nav ul li {
+                margin: 0 10px 10px;
+            }
+
+            .page-hero {
+                padding: 40px 0;
+            }
+
+            .page-hero h1 {
+                font-size: 1.8em;
+            }
+
+            .page-hero p {
+                font-size: 0.9em;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Kitchen Verses</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Terms of Service for Kitchen Verses</h1>
+                <p>These Terms of Service govern your use of Kitchen Verses. By accessing or using our platform, you agree to be bound by these terms. Please read them carefully.</p>
+            </div>
+        </section>
+
+        <section id="terms-of-service-content" class="container">
+            <div class="terms-content">
+                <p>
+                    <strong>Last Updated: July 6, 2025</strong>
+                </p>
+                <p>
+                    Welcome to Kitchen Verses ("we," "our," or "us"). These Terms of Service ("Terms") govern your access to and use of our website, <a href="https://www.kitchenverses.com">www.kitchenverses.com</a> (the "Site"), and any related services, features, content, or applications we offer (collectively, the "Services"). By accessing or using any part of the Services, you agree to be bound by these Terms. If you do not agree to all the terms and conditions of this agreement, then you may not access the Services.
+                </p>
+                <p>
+                    These Terms constitute a legally binding agreement between you and Kitchen Verses. We may modify these Terms at any time, and such modifications will be effective immediately upon posting the updated Terms on the Site. Your continued use of the Services after any such changes constitutes your acceptance of the new Terms. It is your responsibility to review these Terms periodically for changes.
+                </p>
+
+                <h2>1. Acceptance of Terms</h2>
+                <p>
+                    By creating an account, accessing, or using the Services, you affirm that you are at least 18 years old or the age of legal majority in your jurisdiction, and you are fully able and competent to enter into the terms, conditions, obligations, affirmations, representations, and warranties set forth in these Terms, and to abide by and comply with these Terms. If you are accessing or using the Services on behalf of a company or other legal entity, you represent that you have the authority to bind such entity to these Terms.
+                </p>
+                <p>
+                    Your agreement to these Terms covers all aspects of your interaction with Kitchen Verses, including but not limited to, browsing content, creating an account, submitting recipes and stories, interacting with other users, and utilizing any interactive features provided.
+                </p>
+
+                <h2>2. User Accounts and Registration</h2>
+                <h3>2.1. Account Creation</h3>
+                <p>
+                    To access certain features of the Services, such as submitting recipes or creating a personal "Recipe Journal," you may be required to register for an account. When you register, you agree to provide accurate, current, and complete information as prompted by the registration form and to maintain and promptly update this information to keep it accurate, current, and complete.
+                </p>
+                <h3>2.2. Account Security</h3>
+                <p>
+                    You are solely responsible for maintaining the confidentiality of your account password and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account or any other breach of security. Kitchen Verses will not be liable for any loss or damage arising from your failure to comply with this security obligation. We strongly recommend using a strong, unique password and enabling any available multi-factor authentication.
+                </p>
+                <h3>2.3. Account Termination</h3>
+                <p>
+                    We reserve the right to suspend or terminate your account and your access to the Services at our sole discretion, without prior notice or liability, for any reason, including but not limited to:
+                </p>
+                <ul>
+                    <li>Breach of these Terms.</li>
+                    <li>Violation of any applicable law or regulation.</li>
+                    <li>Conduct that we believe is harmful to other users, third parties, or Kitchen Verses.</li>
+                    <li>Inactivity for an extended period.</li>
+                </ul>
+                <p>
+                    Upon termination, your right to use the Services will immediately cease. If you wish to terminate your account, you may do so by contacting us through the provided channels.
+                </p>
+
+                <h2>3. User Content and Submissions</h2>
+                <h3>3.1. Definition of User Content</h3>
+                <p>
+                    "User Content" refers to any content that you submit, post, upload, publish, or transmit through the Services, including but not limited to recipes, culinary stories, comments, reviews, photographs, videos, text, and any other materials.
+                </p>
+                <h3>3.2. Ownership of User Content</h3>
+                <p>
+                    You retain all ownership rights to your User Content. By submitting User Content to Kitchen Verses, you grant us a worldwide, non-exclusive, royalty-free, fully paid, sublicensable, and transferable license to use, reproduce, distribute, prepare derivative works of, display, perform, and otherwise exploit your User Content in connection with the Services and Kitchen Verses's (and its successors' and affiliates') business, including without limitation for promoting and redistributing part or all of the Services (and derivative works thereof) in any media formats and through any media channels. This license is perpetual and irrevocable.
+                </p>
+                <h3>3.3. Representations and Warranties</h3>
+                <p>
+                    You represent and warrant that:
+                </p>
+                <ul>
+                    <li>You are the sole and exclusive owner of all User Content that you make available through the Services, or you have all rights, licenses, consents, and releases that are necessary to grant to Kitchen Verses the rights in such User Content, as contemplated under these Terms.</li>
+                    <li>Neither the User Content nor your posting, uploading, publication, submission, or transmittal of the User Content or Kitchen Verses's use of the User Content (or any portion thereof) will infringe, misappropriate, or violate a third party's patent, copyright, trademark, trade secret, moral rights, or other proprietary or intellectual property rights, or rights of publicity or privacy, or result in the violation of any applicable law or regulation.</li>
+                    <li>Your User Content is not defamatory, libelous, hateful, violent, obscene, pornographic, unlawful, or otherwise offensive, as determined by Kitchen Verses in its sole discretion.</li>
+                </ul>
+                <h3>3.4. Content Standards and Prohibited Conduct</h3>
+                <p>
+                    You agree not to post, upload, publish, submit, or transmit any User Content that:
+                </p>
+                <ul>
+                    <li>Is unlawful, harmful, threatening, abusive, harassing, tortious, defamatory, vulgar, obscene, libelous, invasive of another's privacy, hateful, or racially, ethnically, or otherwise objectionable.</li>
+                    <li>Harms minors in any way.</li>
+                    <li>Impersonates any person or entity, or falsely states or otherwise misrepresents your affiliation with a person or entity.</li>
+                    <li>Contains unsolicited or unauthorized advertising, promotional materials, "junk mail," "spam," "chain letters," "pyramid schemes," or any other form of solicitation.</li>
+                    <li>Contains software viruses or any other computer code, files, or programs designed to interrupt, destroy, or limit the functionality of any computer software or hardware or telecommunications equipment.</li>
+                    <li>Interferes with or disrupts the Services or servers or networks connected to the Services, or disobeys any requirements, procedures, policies, or regulations of networks connected to the Services.</li>
+                    <li>Intentionally or unintentionally violates any applicable local, state, national, or international law.</li>
+                    <li>"Stalks" or otherwise harasses another.</li>
+                    <li>Collects or stores personal data about other users without their express consent.</li>
+                </ul>
+                <p>
+                    We reserve the right to remove any User Content at our sole discretion, without prior notice, if we believe it violates these Terms or is otherwise objectionable.
+                </p>
+                <h3>3.5. Responsibility for User Content</h3>
+                <p>
+                    You are solely responsible for your User Content and the consequences of posting or publishing it. Kitchen Verses does not endorse any User Content or any opinion, recommendation, or advice expressed therein, and we expressly disclaim any and all liability in connection with User Content.
+                </p>
+
+                <h2>4. Intellectual Property Rights</h2>
+                <h3>4.1. Kitchen Verses Content</h3>
+                <p>
+                    All content on the Site and Services, excluding User Content, including but not limited to text, graphics, logos, images, audio clips, digital downloads, data compilations, and software (collectively, "Kitchen Verses Content"), is the property of Kitchen Verses or its content suppliers and protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.
+                </p>
+                <h3>4.2. Trademarks</h3>
+                <p>
+                    The Kitchen Verses name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Kitchen Verses or its affiliates or licensors. You must not use such marks without the prior written permission of Kitchen Verses. All other names, logos, product and service names, designs, and slogans on this Site are the trademarks of their respective owners.
+                </p>
+                <h3>4.3. Limited License</h3>
+                <p>
+                    Subject to your compliance with these Terms, Kitchen Verses grants you a limited, non-exclusive, non-transferable, non-sublicensable license to access and use the Services and to download and print any portion of the Kitchen Verses Content to which you have properly gained access solely for your personal, non-commercial use.
+                </p>
+                <h3>4.4. Restrictions</h3>
+                <p>
+                    You agree not to reproduce, duplicate, copy, sell, resell, or exploit any portion of the Services, use of the Services, or access to the Services without the express written permission of Kitchen Verses. You may not modify, adapt, translate, reverse engineer, decompile, disassemble, or create derivative works based on any part of the Services or Kitchen Verses Content.
+                </p>
+
+                <h2>5. Prohibited Conduct</h2>
+                <p>
+                    In addition to the content standards mentioned in Section 3.4, you agree not to engage in any of the following prohibited activities:
+                </p>
+                <ul>
+                    <li>Using the Services for any illegal purpose or in violation of any local, state, national, or international law.</li>
+                    <li>Violating or encouraging others to violate any right of a third party, including by infringing or misappropriating any third-party intellectual property right.</li>
+                    <li>Interfering with security-related features of the Services, including by: (a) disabling or circumventing features that prevent or limit use or copying of any content; or (b) reverse engineering or otherwise attempting to discover the source code of any portion of the Services except to the extent that the activity is expressly permitted by applicable law.</li>
+                    <li>Interfering with the operation of the Services or any user's enjoyment of the Services, including by: (a) uploading or otherwise disseminating any virus, adware, spyware, worm, or other malicious code; (b) making any unsolicited offer or advertisement to another user of the Services; (c) attempting to collect personal information about another user or third party without consent; or (d) interfering with or disrupting any network, equipment, or server connected to or used to provide the Services, or violating any regulation, policy, or procedure of any such network, equipment, or server.</li>
+                    <li>Performing any fraudulent activity including impersonating any person or entity, claiming false affiliations, accessing the Services accounts of others without permission, or falsifying your age or date of birth.</li>
+                    <li>Selling or otherwise transferring the access granted under these Terms or any Materials (as defined in Section 4) or any right or ability to view, access, or use any Materials.</li>
+                    <li>Circumventing, removing, altering, deactivating, degrading, or thwarting any of the content protections or other security measures of the Services.</li>
+                    <li>Copying, archiving, reproducing, redistributing, or otherwise exploiting any portion of the Services or Kitchen Verses Content except as expressly permitted by these Terms.</li>
+                    <li>Using any robot, spider, scraper, or other automated means to access the Services for any purpose without our express written permission.</li>
+                    <li>Harvesting or otherwise collecting information about others, including email addresses, without their consent.</li>
+                </ul>
+
+                <h2>6. Third-Party Links and Services</h2>
+                <p>
+                    The Services may contain links to third-party websites or resources. We provide these links only as a convenience and are not responsible for the content, products, or services on or available from those websites or resources or links displayed on such websites. You acknowledge sole responsibility for and assume all risk arising from your use of any third-party websites or resources. Our <a href="privacy.html">Privacy Policy</a> and <a href="cookies.html">Cookies Policy</a> do not apply to third-party websites.
+                </p>
+
+                <h2>7. Disclaimers</h2>
+                <p>
+                    THE SERVICES AND ALL CONTENT, MATERIALS, AND PRODUCTS INCLUDED ON OR OTHERWISE MADE AVAILABLE TO YOU THROUGH THE SERVICES ARE PROVIDED BY KITCHEN VERSES ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND TITLE.
+                </p>
+                <p>
+                    KITCHEN VERSES DOES NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE, THAT DEFECTS WILL BE CORRECTED, OR THAT THE SERVICES OR THE SERVERS THAT MAKE THE SERVICES AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.
+                </p>
+                <p>
+                    KITCHEN VERSES DOES NOT WARRANT OR MAKE ANY REPRESENTATIONS REGARDING THE USE OR THE RESULTS OF THE USE OF THE SERVICES OR CONTENT IN TERMS OF THEIR CORRECTNESS, ACCURACY, RELIABILITY, OR OTHERWISE. YOU ASSUME THE ENTIRE COST OF ALL NECESSARY SERVICING, REPAIR, OR CORRECTION.
+                </p>
+                <p>
+                    ANY CONTENT DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SERVICES IS DONE AT YOUR OWN DISCRETION AND RISK, AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM THE DOWNLOAD OF ANY SUCH MATERIAL.
+                </p>
+                <p>
+                    THE RECIPES AND CULINARY INFORMATION PROVIDED ON KITCHEN VERSES ARE FOR INFORMATIONAL AND ENTERTAINMENT PURPOSES ONLY. KITCHEN VERSES DOES NOT GUARANTEE THE SAFETY, QUALITY, OR SUITABILITY OF ANY RECIPE OR INGREDIENT. USERS ARE RESPONSIBLE FOR EXERCISING THEIR OWN JUDGMENT AND TAKING ALL NECESSARY PRECAUTIONS, INCLUDING BUT NOT LIMITED TO, CHECKING FOR ALLERGENS, ENSURING PROPER FOOD HANDLING, AND ADHERING TO FOOD SAFETY GUIDELINES. KITCHEN VERSES IS NOT RESPONSIBLE FOR ANY ADVERSE EFFECTS OR HEALTH ISSUES RESULTING FROM THE PREPARATION OR CONSUMPTION OF FOOD BASED ON RECIPES FROM THE SERVICES.
+                </p>
+
+                <h2>8. Limitation of Liability</h2>
+                <p>
+                    TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL KITCHEN VERSES, ITS AFFILIATES, DIRECTORS, EMPLOYEES, AGENTS, PARTNERS, SUPPLIERS, OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM (I) YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE SERVICES; (II) ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SERVICES; (III) ANY CONTENT OBTAINED FROM THE SERVICES; AND (IV) UNAUTHORIZED ACCESS, USE, OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT, WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), OR ANY OTHER LEGAL THEORY, WHETHER OR NOT WE HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGE, AND EVEN IF A REMEDY SET FORTH HEREIN IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE.
+                </p>
+                <p>
+                    IN NO EVENT SHALL THE AGGREGATE LIABILITY OF KITCHEN VERSES EXCEED THE GREATER OF ONE HUNDRED U.S. DOLLARS ($100.00) OR THE AMOUNT YOU PAID KITCHEN VERSES, IF ANY, IN THE PAST SIX MONTHS FOR THE SERVICES GIVING RISE TO THE CLAIM.
+                </p>
+                <p>
+                    SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, SO THE LIMITATIONS ABOVE MAY NOT APPLY TO YOU.
+                </p>
+
+                <h2>9. Indemnification</h2>
+                <p>
+                    You agree to indemnify, defend, and hold harmless Kitchen Verses, its affiliates, officers, directors, employees, agents, and licensors from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) that such parties may incur as a result of or arising from:
+                </p>
+                <ul>
+                    <li>Your User Content or any content you submit, post, transmit, or otherwise make available through the Services.</li>
+                    <li>Your use of the Services.</li>
+                    <li>Your violation of these Terms.</li>
+                    <li>Your violation of any rights of any other person or entity.</li>
+                </ul>
+                <p>
+                    We reserve the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify us, and you agree to cooperate with our defense of these claims. You agree not to settle any matter without the prior written consent of Kitchen Verses.
+                </p>
+
+                <h2>10. Governing Law and Dispute Resolution</h2>
+                <h3>10.1. Governing Law</h3>
+                <p>
+                    These Terms shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law principles.
+                </p>
+                <h3>10.2. Arbitration</h3>
+                <p>
+                    Any dispute, controversy, or claim arising out of or relating to these Terms or the breach, termination, or validity thereof, shall be finally settled by binding arbitration administered by a mutually agreed-upon arbitration institution in Delhi, India, in accordance with its rules. The arbitration shall be conducted in English. The award rendered by the arbitrator(s) shall be final and binding upon the parties and may be entered as a judgment in any court of competent jurisdiction.
+                </p>
+                <h3>10.3. Exceptions to Arbitration</h3>
+                <p>
+                    Notwithstanding the foregoing, nothing in these Terms will be deemed to waive, preclude, or otherwise limit the right of either party to: (a) bring an individual action in small claims court; (b) pursue an enforcement action through the applicable federal, state, or local agency if that action is available; (c) seek injunctive relief in a court of law; or (d) to file suit in a court of law to address an intellectual property infringement claim.
+                </p>
+
+                <h2>11. Miscellaneous Provisions</h2>
+                <h3>11.1. Entire Agreement</h3>
+                <p>
+                    These Terms, together with our <a href="privacy.html">Privacy Policy</a> and <a href="cookies.html">Cookies Policy</a>, constitute the entire and exclusive understanding and agreement between Kitchen Verses and you regarding the Services, and these Terms supersede and replace any and all prior oral or written understandings or agreements between Kitchen Verses and you regarding the Services.
+                </p>
+                <h3>11.2. Severability</h3>
+                <p>
+                    If any provision of these Terms is held to be invalid or unenforceable, that provision will be enforced to the maximum extent permissible, and the other provisions of these Terms will remain in full force and effect.
+                </p>
+                <h3>11.3. Waiver</h3>
+                <p>
+                    The failure of Kitchen Verses to enforce any right or provision of these Terms will not be considered a waiver of such right or provision. The waiver of any such right or provision will be effective only if in writing and signed by a duly authorized representative of Kitchen Verses. Except as expressly set forth in these Terms, the exercise by either party of any of its remedies under these Terms will be without prejudice to its other remedies under these Terms or otherwise.
+                </p>
+                <h3>11.4. Assignment</h3>
+                <p>
+                    You may not assign or transfer these Terms, by operation of law or otherwise, without Kitchen Verses's prior written consent. Any attempt by you to assign or transfer these Terms, without such consent, will be null and of no effect. Kitchen Verses may assign or transfer these Terms, at its sole discretion, without restriction. Subject to the foregoing, these Terms will bind and inure to the benefit of the parties, their successors, and permitted assigns.
+                </p>
+                <h3>11.5. Force Majeure</h3>
+                <p>
+                    Kitchen Verses shall not be liable for any delay or failure to perform resulting from causes outside its reasonable control, including, but not limited to, acts of God, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, accidents, strikes, or shortages of transportation facilities, fuel, energy, labor, or materials.
+                </p>
+                <h3>11.6. Feedback</h3>
+                <p>
+                    We welcome your feedback, comments, and suggestions for improvements to the Services ("Feedback"). You can submit Feedback by contacting us through the provided channels. You grant to us a non-exclusive, worldwide, perpetual, irrevocable, fully-paid, royalty-free, sublicensable, and transferable license under any and all intellectual property rights that you own or control to use, copy, modify, create derivative works based upon, and otherwise exploit the Feedback for any purpose.
+                </p>
+                <h3>11.7. Headings</h3>
+                <p>
+                    The section headings in these Terms are for convenience only and have no legal or contractual effect.
+                </p>
+                <h3>11.8. Survival</h3>
+                <p>
+                    The following sections will survive any termination or expiration of these Terms: Sections 3 (User Content and Submissions), 4 (Intellectual Property Rights), 7 (Disclaimers), 8 (Limitation of Liability), 9 (Indemnification), 10 (Governing Law and Dispute Resolution), and 11 (Miscellaneous Provisions).
+                </p>
+                <h3>11.9. Electronic Communications</h3>
+                <p>
+                    By using the Services, you consent to receiving electronic communications from Kitchen Verses. These communications may include notices about your account, transactional information, and other information concerning or related to the Services. You agree that any notices, agreements, disclosures, or other communications that we send to you electronically will satisfy any legal communication requirements, including that such communications be in writing.
+                </p>
+                <h3>11.10. No Partnership</h3>
+                <p>
+                    You agree that no joint venture, partnership, employment, or agency relationship exists between you and Kitchen Verses as a result of these Terms or your use of the Services.
+                </p>
+                <h3>11.11. Compliance with Export Laws</h3>
+                <p>
+                    You agree to comply with all applicable export and re-export control laws and regulations, including the Export Administration Regulations ("EAR") administered by the U.S. Department of Commerce and trade and economic sanctions maintained by the U.S. Treasury Department's Office of Foreign Assets Control ("OFAC"). You represent and warrant that you are not (a) located in or a national or resident of any country subject to U.S. embargo or UN sanctions, or (b) on any U.S. government list of prohibited or restricted parties.
+                </p>
+                <h3>11.12. User Disputes</h3>
+                <p>
+                    You are solely responsible for your interactions with other users of the Services. We reserve the right, but have no obligation, to monitor disputes between you and other users. Kitchen Verses shall have no liability for your interactions with other users, or for any user's action or inaction.
+                </p>
+                <h3>11.13. Reporting Violations</h3>
+                <p>
+                    If you believe that any User Content or activity on the Services violates these Terms or is otherwise inappropriate, please report it to us immediately using the contact information provided below. We will review all reports and take appropriate action at our sole discretion.
+                </p>
+                <h3>11.14. Accessibility</h3>
+                <p>
+                    Kitchen Verses is committed to making its Services accessible to all users. If you have any difficulty accessing or using any part of the Services, please contact us at <a href="mailto:contact@kitchenverses.com">contact@kitchenverses.com</a>. We will work with you to provide the information, item, or transaction you seek through an alternative communication method or one that is accessible for you consistent with applicable law.
+                </p>
+                <h3>11.15. Language</h3>
+                <p>
+                    These Terms are written in English. Any translation of these Terms is provided for convenience only, and the English version will govern your relationship with Kitchen Verses.
+                </p>
+                <h3>11.16. Updates to Services</h3>
+                <p>
+                    We may, from time to time, provide enhancements or improvements to the features/functionality of the Services, which may include patches, bug fixes, updates, upgrades, and other modifications ("Updates"). Updates may modify or delete certain features and/or functionalities of the Services. You agree that Kitchen Verses has no obligation to (i) provide any Updates, or (ii) continue to provide or enable any particular features and/or functionalities of the Services. You further agree that all Updates will be (i) deemed to constitute an integral part of the Services, and (ii) subject to the terms and conditions of these Terms.
+                </p>
+                <h3>11.17. No Implied Waiver</h3>
+                <p>
+                    No failure or delay by Kitchen Verses in exercising any right, power, or privilege under these Terms shall operate as a waiver thereof, nor shall any single or partial exercise thereof preclude any other or further exercise thereof or the exercise of any other right, power, or privilege.
+                </p>
+                <h3>11.18. Rights Reserved</h3>
+                <p>
+                    Any rights not expressly granted herein are reserved.
+                </p>
+
+                <h2>12. Contact Information</h2>
+                <p>
+                    If you have any questions about these Terms of Service, please contact us:
+                </p>
+                <ul>
+                    <li><strong>By Email:</strong> <a href="mailto:info@kitchenverses.com">info@kitchenverses.com</a></li>
+                    <li><strong>By Mail:</strong><br>
+                        Kitchen Verses Legal Department<br>
+                        123 Culinary Lane, Storytelling City<br>
+                        Delhi, India, 110001
+                    </li>
+                </ul>
+                <p>
+                    Thank you for using Kitchen Verses. We hope you enjoy our platform and the stories it brings to life.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2025 Kitchen Verses. All rights reserved.</p>
+                <p>
+                    Kitchen Verses<br>
+                    123 Culinary Lane, Storytelling City<br>
+                    Delhi, India, 110001<br>
+                    Email: info@kitchenverses.com
+                </p>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook" width="24" height="24"></a>
+                <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="Instagram" width="24" height="24"></a>
+                <a href="#" aria-label="Pinterest"><img src="https://img.icons8.com/ios-filled/50/ffffff/pinterest--v1.png" alt="Pinterest" width="24" height="24"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

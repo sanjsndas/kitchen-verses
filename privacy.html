@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Verses — Privacy Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS for Kitchen Verses Privacy Policy Page */
+
+        :root {
+            --warm-terracotta: #E57373;
+            --sage-green: #81C784;
+            --linen-white: #F9FBE7;
+            --deep-charcoal-text: #263238;
+            --honey-gold: #FFB300;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--linen-white);
+            color: var(--deep-charcoal-text);
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: var(--linen-white);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: var(--warm-terracotta);
+            text-decoration: none;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--deep-charcoal-text);
+            font-weight: 400;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--warm-terracotta);
+        }
+
+        .page-hero {
+            background-color: var(--sage-green); /* Changed hero color for privacy page */
+            color: var(--linen-white);
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .page-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2em;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .page-hero p {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            color: var(--deep-charcoal-text);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--warm-terracotta);
+            margin: 15px auto 0;
+        }
+
+        .privacy-content {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .privacy-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            color: var(--warm-terracotta);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--sage-green);
+            padding-bottom: 10px;
+        }
+
+        .privacy-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: var(--deep-charcoal-text);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .privacy-content p, .privacy-content ul, .privacy-content ol {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .privacy-content ul, .privacy-content ol {
+            margin-left: 25px;
+        }
+
+        .privacy-content li {
+            margin-bottom: 8px;
+        }
+
+        .privacy-content a {
+            color: var(--sage-green);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .privacy-content a:hover {
+            color: var(--warm-terracotta);
+        }
+
+        footer {
+            background-color: var(--deep-charcoal-text);
+            color: var(--linen-white);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav ul li {
+            margin: 0 15px;
+        }
+
+        .footer-nav ul li a {
+            color: var(--linen-white);
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav ul li a:hover {
+            color: var(--warm-terracotta);
+        }
+
+        .footer-info p {
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .footer-social a {
+            color: var(--linen-white);
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: var(--honey-gold);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 0 15px 10px;
+            }
+
+            .page-hero {
+                padding: 60px 0;
+            }
+
+            .page-hero h1 {
+                font-size: 2.5em;
+            }
+
+            .page-hero p {
+                font-size: 1.1em;
+            }
+
+            .section-title {
+                font-size: 2.2em;
+            }
+
+            .privacy-content {
+                padding: 25px;
+            }
+
+            .privacy-content h2 {
+                font-size: 1.8em;
+            }
+
+            .privacy-content h3 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 2em;
+            }
+
+            nav ul li {
+                margin: 0 10px 10px;
+            }
+
+            .page-hero {
+                padding: 40px 0;
+            }
+
+            .page-hero h1 {
+                font-size: 1.8em;
+            }
+
+            .page-hero p {
+                font-size: 0.9em;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Kitchen Verses</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Our Commitment to Your Privacy</h1>
+                <p>At Kitchen Verses, we believe your personal stories and culinary journeys are sacred. This Privacy Policy outlines how we collect, use, protect, and share your information, ensuring your trust is always upheld.</p>
+            </div>
+        </section>
+
+        <section id="privacy-policy-content" class="container">
+            <div class="privacy-content">
+                <p>
+                    <strong>Last Updated: July 6, 2025</strong>
+                </p>
+                <p>
+                    Welcome to Kitchen Verses ("we," "our," or "us"). We are deeply committed to protecting the privacy of our users ("you" or "your") and ensuring a safe and inspiring environment for sharing culinary stories. This Privacy Policy explains our practices regarding the collection, use, and disclosure of information that we receive through our website, <a href="https://www.kitchenverses.com">www.kitchenverses.com</a> (the "Site"), and any related services, features, content, or applications we offer (collectively, the "Services").
+                </p>
+                <p>
+                    By accessing or using our Services, you agree to the terms of this Privacy Policy and our <a href="terms.html">Terms of Service</a>. If you do not agree with these terms, please do not access or use our Services.
+                </p>
+
+                <h2>1. Information We Collect</h2>
+                <p>
+                    We collect various types of information to provide and improve our Services, to personalize your experience, and to communicate with you. This information can be broadly categorized into two types: information you provide to us directly and information we collect automatically.
+                </p>
+
+                <h3>1.1. Information You Provide to Us</h3>
+                <p>
+                    When you interact with Kitchen Verses, you may provide us with personal information directly. This includes, but is not limited to:
+                </p>
+                <ul>
+                    <li><strong>Account Information:</strong> When you create an account, you provide us with your name, email address, and a password. You may also choose to provide additional profile information, such as a username, profile picture, a short biography, and links to your social media profiles or personal website. This information helps us to personalize your profile and connect you with other users.</li>
+                    <li><strong>Content Submissions:</strong> If you use our "Write Your Verse" feature to submit recipes, stories, or blog posts, you provide the textual content, any associated images, and metadata (e.g., categories, tags). This content may contain personal details, anecdotes, or cultural references that you choose to share.</li>
+                    <li><strong>Communications:</strong> When you contact us directly (e.g., via email, contact forms, or customer support), we collect the content of your communication, your email address, and any other information you choose to provide. This helps us to respond to your inquiries and improve our support services.</li>
+                    <li><strong>Interactive Features:</strong> If you participate in surveys, contests, promotions, or other interactive features on our Site, we may collect information you provide in connection with these activities.</li>
+                    <li><strong>Payment Information:</strong> If we ever introduce premium features or products that require payment, we will collect payment information such as credit card details or other financial account information. Please note that we typically use third-party payment processors (e.g., Stripe, PayPal) who handle this data securely. We do not store sensitive payment card information on our servers.</li>
+                </ul>
+
+                <h3>1.2. Information We Collect Automatically</h3>
+                <p>
+                    When you access or use our Services, we automatically collect certain information about your device and your activity on the Site. This information helps us to understand how our Services are used, to diagnose technical problems, and to improve user experience. This includes:
+                </p>
+                <ul>
+                    <li><strong>Log Data:</strong> Our servers automatically record information that your browser sends whenever you visit our Site. This log data may include your Internet Protocol ("IP") address, browser type and settings, the date and time of your request, the pages you visit, and referring/exit pages.</li>
+                    <li><strong>Device Information:</strong> We collect information about the device you use to access our Services, including the device model, operating system, unique device identifiers, and mobile network information.</li>
+                    <li><strong>Usage Data:</strong> We collect information about your interactions with our Services, such as the recipes you view, the stories you read, the features you use, the time spent on certain pages, and the search queries you make. This helps us understand user behavior and tailor content.</li>
+                    <li><strong>Location Information:</strong> We may collect approximate location information (e.g., based on your IP address) to provide localized content or features. We do not collect precise GPS location without your explicit consent.</li>
+                    <li><strong>Cookies and Similar Technologies:</strong> We use cookies and similar tracking technologies (like web beacons and pixels) to track activity on our Services and hold certain information. Cookies are small data files stored on your device that allow us to recognize your browser and capture certain information. For more details, please refer to our <a href="cookies.html">Cookies Policy</a>.</li>
+                </ul>
+
+                <h2>2. How We Use Your Information</h2>
+                <p>
+                    We use the information we collect for various purposes, all aimed at providing and improving the Kitchen Verses experience. Our primary uses include:
+                </p>
+                <ul>
+                    <li><strong>To Provide and Maintain Our Services:</strong> This includes operating the website, enabling account creation, allowing you to submit and view content, and providing customer support.</li>
+                    <li><strong>To Personalize Your Experience:</strong> We use your information to tailor content, recommend recipes or stories that may interest you, and present information in a way that is most relevant to your preferences. For example, if you frequently view vegetarian recipes, we might highlight similar content.</li>
+                    <li><strong>To Improve and Develop Our Services:</strong> We analyze usage patterns and feedback to understand how our Services are used, identify areas for improvement, develop new features, and enhance existing ones. This might involve optimizing page load times, refining search algorithms, or improving content categorization.</li>
+                    <li><strong>To Communicate with You:</strong> We use your contact information to send you important updates about your account, service announcements, newsletters (if you opt-in), and promotional materials about Kitchen Verses or our partners that we believe may be of interest to you. You can opt-out of promotional communications at any time.</li>
+                    <li><strong>For Security and Fraud Prevention:</strong> We use information to detect, prevent, and address technical issues, security incidents, and fraudulent or illegal activities. This includes monitoring for unauthorized access, protecting against spam, and ensuring the integrity of our platform.</li>
+                    <li><strong>To Understand and Analyze Trends:</strong> We aggregate and anonymize data to analyze trends, conduct research, and perform statistical analysis to better understand our user base and market dynamics. This helps us make informed business decisions without identifying individual users.</li>
+                    <li><strong>For Legal Compliance:</strong> We may use your information to comply with applicable laws, regulations, legal processes, or governmental requests. This includes responding to subpoenas, court orders, or other legal obligations.</li>
+                    <li><strong>To Enforce Our Terms of Service:</strong> We use information to enforce our <a href="terms.html">Terms of Service</a>, including investigating potential violations.</li>
+                </ul>
+
+                <h2>3. How We Share Your Information</h2>
+                <p>
+                    We understand the importance of your privacy and are careful about how we share your information. We do not sell your personal information to third parties. We may share your information in the following limited circumstances:
+                </p>
+
+                <h3>3.1. With Your Consent</h3>
+                <p>
+                    We may share your information when you give us explicit consent to do so. For example, if you choose to connect your Kitchen Verses account with a third-party social media service, you authorize us to share information with that service.
+                </p>
+
+                <h3>3.2. Publicly Available Information</h3>
+                <p>
+                    Certain information you provide on Kitchen Verses is intended for public display. This includes:
+                </p>
+                <ul>
+                    <li><strong>User-Submitted Content:</strong> Recipes, stories, comments, and any associated images or metadata that you submit through "Write Your Verse" or other public features will be publicly visible to all users and visitors of the Site. This content may include your chosen username or profile name.</li>
+                    <li><strong>Profile Information:</strong> Your chosen username, profile picture, and any biographical information you add to your public profile will be visible to others.</li>
+                </ul>
+                <p>
+                    Please be mindful of what you choose to share publicly, as this information can be accessed, used, and stored by others.
+                </p>
+
+                <h3>3.3. With Service Providers</h3>
+                <p>
+                    We engage trusted third-party companies and individuals to perform services on our behalf and to assist us in operating our Services. These "Service Providers" may have access to your personal information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose. Examples include:
+                </p>
+                <ul>
+                    <li><strong>Hosting and Infrastructure Providers:</strong> For hosting our website and storing data (e.g., Google Cloud, Amazon Web Services).</li>
+                    <li><strong>Analytics Providers:</strong> To help us understand how users interact with our Services (e.g., Google Analytics).</li>
+                    <li><strong>Customer Support Platforms:</strong> To manage and respond to your inquiries.</li>
+                    <li><strong>Email Service Providers:</strong> To send emails and newsletters on our behalf.</li>
+                    <li><strong>Payment Processors:</strong> To handle secure payment transactions (as mentioned in Section 1.1).</li>
+                    <li><strong>Content Delivery Networks (CDNs):</strong> To efficiently deliver website content.</li>
+                </ul>
+
+                <h3>3.4. For Legal Reasons and Protection</h3>
+                <p>
+                    We may disclose your information if we believe it's necessary to comply with a legal obligation, protect our rights or property, or ensure the safety of our users or the public. This includes:
+                </p>
+                <ul>
+                    <li><strong>Compliance with Laws:</strong> Responding to subpoenas, court orders, or other legal processes.</li>
+                    <li><strong>Protection of Rights:</strong> Enforcing our Terms of Service, investigating potential violations, and protecting the rights, property, or safety of Kitchen Verses, our users, or others.</li>
+                    <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, reorganization, bankruptcy, or sale of all or a portion of our assets, your information may be transferred as part of that transaction. We will notify you via email and/or a prominent notice on our Site of any change in ownership or uses of your personal information, as well as any choices you may have regarding your personal information.</li>
+                </ul>
+
+                <h3>3.5. Aggregated or Anonymized Data</h3>
+                <p>
+                    We may share aggregated or anonymized information that cannot reasonably be used to identify you. For example, we may share statistics about the most popular recipe categories or general user demographics with partners or for research purposes. This data helps us to understand broad trends without compromising individual privacy.
+                </p>
+
+                <h2>4. Your Choices and Rights</h2>
+                <p>
+                    You have certain rights regarding your personal information. We are committed to providing you with mechanisms to exercise these rights.
+                </p>
+
+                <h3>4.1. Account Information</h3>
+                <ul>
+                    <li><strong>Access and Update:</strong> You can access and update most of your account information and profile details by logging into your account settings on the Site.</li>
+                    <li><strong>Deletion:</strong> You can delete your account by contacting us at <a href="mailto:privacy@kitchenverses.com">privacy@kitchenverses.com</a>. Please note that deleting your account may result in the removal of your public content, but some data may remain in our backups or archives for a limited period as required by law or for legitimate business purposes.</li>
+                </ul>
+
+                <h3>4.2. Communications Preferences</h3>
+                <ul>
+                    <li><strong>Email Marketing:</strong> You can opt-out of receiving promotional emails from us by following the unsubscribe instructions provided in those emails or by updating your notification preferences in your account settings. Even if you opt-out of marketing communications, we may still send you non-promotional messages related to your account or our Services (e.g., password reset emails, service updates).</li>
+                </ul>
+
+                <h3>4.3. Cookies</h3>
+                <ul>
+                    <li>Most web browsers are set to accept cookies by default. You can usually modify your browser settings to decline cookies or to notify you when a cookie is being placed on your device. However, if you choose to disable cookies, some features of our Services may not function properly. Please refer to our <a href="cookies.html">Cookies Policy</a> for more detailed information.</li>
+                </ul>
+
+                <h3>4.4. Data Subject Rights (GDPR, CCPA, etc.)</h3>
+                <p>
+                    Depending on your location and applicable data protection laws (such as the General Data Protection Regulation (GDPR) in Europe or the California Consumer Privacy Act (CCPA) in the US), you may have additional rights regarding your personal data, including:
+                </p>
+                <ul>
+                    <li><strong>Right to Access:</strong> The right to request copies of your personal data held by us.</li>
+                    <li><strong>Right to Rectification:</strong> The right to request that we correct any information you believe is inaccurate or complete information you believe is incomplete.</li>
+                    <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> The right to request that we erase your personal data under certain conditions.</li>
+                    <li><strong>Right to Restrict Processing:</strong> The right to request that we restrict the processing of your personal data under certain conditions.</li>
+                    <li><strong>Right to Object to Processing:</strong> The right to object to our processing of your personal data under certain conditions.</li>
+                    <li><strong>Right to Data Portability:</strong> The right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</li>
+                    <li><strong>Right to Withdraw Consent:</strong> Where we rely on your consent to process your personal data, you have the right to withdraw that consent at any time.</li>
+                </ul>
+                <p>
+                    To exercise any of these rights, please contact us at <a href="mailto:privacy@kitchenverses.com">privacy@kitchenverses.com</a>. We will respond to your request within a reasonable timeframe and in accordance with applicable laws. We may need to verify your identity before fulfilling your request.
+                </p>
+
+                <h2>5. Data Security</h2>
+                <p>
+                    We take the security of your personal information seriously and implement a variety of technical and organizational measures designed to protect your data from unauthorized access, alteration, disclosure, or destruction. These measures include:
+                </p>
+                <ul>
+                    <li><strong>Encryption:</strong> We use Secure Socket Layer (SSL) technology to encrypt data transmitted between your browser and our servers, particularly for sensitive information like login credentials.</li>
+                    <li><strong>Access Controls:</strong> Access to personal data is restricted to authorized personnel who require it for legitimate business purposes and are bound by confidentiality obligations.</li>
+                    <li><strong>Regular Audits and Monitoring:</strong> We regularly review our security practices and monitor our systems for potential vulnerabilities and attacks.</li>
+                    <li><strong>Data Minimization:</strong> We only collect personal data that is necessary for the purposes outlined in this policy.</li>
+                    <li><strong>Employee Training:</strong> Our employees receive regular training on data protection and security best practices.</li>
+                </ul>
+                <p>
+                    Despite our best efforts, no method of transmission over the Internet or method of electronic storage is 100% secure. Therefore, while we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security. You are also responsible for maintaining the confidentiality of your account password and for any activities that occur under your account.
+                </p>
+
+                <h2>6. Data Retention</h2>
+                <p>
+                    We retain your personal information for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements. The retention period may vary depending on the type of information and the purpose of processing.
+                </p>
+                <ul>
+                    <li><strong>Account Data:</strong> We retain your account information for as long as your account is active to provide you with our Services. If you delete your account, we will initiate the deletion of your personal data, though some residual copies may remain in our backup systems for a limited period (e.g., 30-90 days) due to technical constraints or legal obligations.</li>
+                    <li><strong>Content Data:</strong> Content you submit (recipes, stories) may remain on the Site even after account deletion if it has been published publicly and is linked to the community's collective knowledge, unless you specifically request its removal and it is legally permissible.</li>
+                    <li><strong>Usage Data:</strong> We retain anonymized or aggregated usage data for analytical purposes indefinitely, as it does not identify individual users.</li>
+                    <li><strong>Legal and Compliance:</strong> We may retain certain information for longer periods if required by law (e.g., tax, accounting, or legal obligations) or if necessary to resolve disputes, enforce our agreements, or protect our legal rights.</li>
+                </ul>
+
+                <h2>7. International Data Transfers</h2>
+                <p>
+                    Kitchen Verses operates globally, and your information may be stored and processed in countries other than your own, including in the United States or India, where our primary servers and operations are located. Data protection laws in these countries may differ from those in your jurisdiction.
+                </p>
+                <p>
+                    By using our Services, you understand and agree that your information may be transferred to and stored in these countries. When we transfer personal data across borders, we take appropriate measures to ensure that your data is protected in accordance with this Privacy Policy and applicable laws. This may include implementing standard contractual clauses approved by relevant authorities or relying on other legal mechanisms for data transfer.
+                </p>
+
+                <h2>8. Children's Privacy</h2>
+                <p>
+                    Our Services are not directed to individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided us with personal information, we will take steps to delete such information from our files as soon as possible. If you are a parent or guardian and you believe that your child has provided us with personal information, please contact us at <a href="mailto:privacy@kitchenverses.com">privacy@kitchenverses.com</a>.
+                </p>
+
+                <h2>9. Third-Party Links and Services</h2>
+                <p>
+                    Our Site may contain links to third-party websites or services that are not owned or controlled by Kitchen Verses. This Privacy Policy applies only to our Services. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. We strongly advise you to review the privacy policies of any third-party websites or services you visit.
+                </p>
+                <p>
+                    For example, if you share a recipe from Kitchen Verses on social media platforms like Facebook or Instagram, your interaction with those platforms is governed by their respective privacy policies, not ours.
+                </p>
+
+                <h2>10. Changes to This Privacy Policy</h2>
+                <p>
+                    We may update our Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this policy. We may also notify you through email or other prominent means prior to the change becoming effective.
+                </p>
+                <p>
+                    We encourage you to review this Privacy Policy periodically for any changes. Your continued use of our Services after any modifications to this Privacy Policy will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy.
+                </p>
+
+                <h2>11. Contact Us</h2>
+                <p>
+                    If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please do not hesitate to contact us:
+                </p>
+                <ul>
+                    <li><strong>By Email:</strong> <a href="mailto:privacy@kitchenverses.com">privacy@kitchenverses.com</a></li>
+                    <li><strong>By Mail:</strong><br>
+                        Kitchen Verses Privacy Team<br>
+                        123 Culinary Lane, Storytelling City<br>
+                        Delhi, India, 110001
+                    </li>
+                </ul>
+                <p>
+                    We are committed to working with you to obtain a fair resolution of any complaint or concern about privacy.
+                </p>
+                <p>
+                    Thank you for trusting Kitchen Verses with your culinary stories and personal information. We are honored to be a part of your journey.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2025 Kitchen Verses. All rights reserved.</p>
+                <p>
+                    Kitchen Verses<br>
+                    123 Culinary Lane, Storytelling City<br>
+                    Delhi, India, 110001<br>
+                    Email: info@kitchenverses.com
+                </p>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook" width="24" height="24"></a>
+                <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="Instagram" width="24" height="24"></a>
+                <a href="#" aria-label="Pinterest"><img src="https://img.icons8.com/ios-filled/50/ffffff/pinterest--v1.png" alt="Pinterest" width="24" height="24"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
